@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane fx:id="thankDialog" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.userShoppingCartCont">
+    <header>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0">
+         <children>
+            <Label fx:id="thank" layoutX="14.0" layoutY="57.0" prefHeight="43.0" prefWidth="228.0" text="Order done succssfully, Thank You for you'r order !" wrapText="true">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="thankImg" fitHeight="167.0" fitWidth="191.0" layoutX="266.0" layoutY="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../Images/peeeer.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="thank2" layoutX="14.0" layoutY="108.0" prefHeight="56.0" prefWidth="181.0" text="Stay available ! You'll recive You'r Order as soon as possible" wrapText="true">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="15.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    </header>
+    <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0">
+         <children>
+            <Button fx:id="okk" layoutX="393.0" layoutY="12.0" mnemonicParsing="false" onAction="#homeClicked" prefHeight="26.0" prefWidth="61.0" text="OK">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="thank3" layoutX="14.0" layoutY="16.0" text="enjoj you'r meal.  ">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="16.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    </content>
+    <expandableContent>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+    </expandableContent>
+</DialogPane>

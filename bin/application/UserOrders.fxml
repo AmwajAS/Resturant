@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.userOrdersCont">
+   <children>
+      <ImageView fx:id="wallPaper" fitHeight="555.0" fitWidth="1000.0" layoutY="100.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Images/our-menu-main-hero-with-overlay-1920_150dpi.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="prevOrd" layoutX="351.0" layoutY="35.0" prefHeight="34.0" prefWidth="262.0" text="My Previous Orders" AnchorPane.leftAnchor="351.0" AnchorPane.rightAnchor="387.0">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+         <effect>
+            <Reflection bottomOpacity="0.38" fraction="0.85" topOpacity="0.48" />
+         </effect>
+      </Label>
+      <HBox fx:id="barHBOX" prefHeight="34.0" prefWidth="1000.0" style="-fx-border-color: #ffffff;">
+         <children>
+            <Button fx:id="myHome" mnemonicParsing="false" onAction="#homeClicked" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="myHomeImg" fitHeight="23.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/home_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="myHomeHelp" text="Main Page">
+                     <font>
+                        <Font name="Times New Roman Italic" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Separator fx:id="sep2" orientation="VERTICAL" prefHeight="200.0" />
+            <Button fx:id="myShoppingCart" mnemonicParsing="false" onAction="#ShopClicked" prefHeight="34.0" prefWidth="64.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="myShoppingCartImg" fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/add_shopping_cart_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="myShoppingCartHelp" text="Shopping Cart" />
+               </tooltip>
+               <font>
+                  <Font name="Times New Roman Italic" size="12.0" />
+               </font>
+            </Button>
+            <Separator fx:id="sep3" layoutX="73.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Button fx:id="resMenu" layoutX="73.0" layoutY="10.0" mnemonicParsing="false" onAction="#menuClicked" prefHeight="34.0" prefWidth="67.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="resMenuImg" fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/restaurant_menu_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="resMenuHelp" text="Menu">
+                     <font>
+                        <Font name="Times New Roman Italic" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Separator fx:id="sep4" layoutX="120.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Button fx:id="myProfile" mnemonicParsing="false" onAction="#profileClicked" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="myProfileImg" fitHeight="23.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/profile_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="myProfileHelp" text="My Profile">
+                     <font>
+                        <Font name="Times New Roman Italic" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Separator fx:id="sep4" orientation="VERTICAL" prefHeight="34.0" prefWidth="544.0" visible="false" />
+         </children>
+      </HBox>
+      <Pane fx:id="prevOrdPane" layoutX="60.0" layoutY="131.0" prefHeight="491.0" prefWidth="867.0" style="-fx-background-color: #ffffff67;">
+         <children>
+            <ListView fx:id="prevOrdList" layoutX="59.0" layoutY="54.0" prefHeight="384.0" prefWidth="749.0" styleClass="list-cell" stylesheets="@application.css" />
+            <Button fx:id="delete" layoutX="14.0" layoutY="444.0" mnemonicParsing="false" onAction="#removeOrd" prefHeight="22.0" prefWidth="67.0" styleClass="list-cell" stylesheets="@application.css" text="Delete">
+               <font>
+                  <Font name="Times New Roman Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="add" layoutX="791.0" layoutY="444.0" mnemonicParsing="false" onAction="#menuClicked" prefHeight="25.0" prefWidth="67.0" stylesheets="@application.css" text="Add">
+               <font>
+                  <Font name="Times New Roman Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text fx:id="deleteHelp" fontSmoothingType="LCD" layoutX="14.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Order To Delete An Order Please Select The Specic Order And Press Delete !" wrappingWidth="429.13671875">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="addHelp" fontSmoothingType="LCD" layoutX="725.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time To Eat? Press ADD !">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

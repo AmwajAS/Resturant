@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.addRegDelCont">
+   <children>
+      <ImageView fx:id="wallPaper" fitHeight="700.0" fitWidth="1000.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Images/wallPaper.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="regDelL" layoutX="219.0" layoutY="79.0" text="A D D   R E G U L A R   D E L I V E R Y" textFill="WHITE" AnchorPane.topAnchor="79.0">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Label>
+      <HBox fx:id="hMainBox" prefHeight="34.0" prefWidth="1000.0" style="-fx-background-color: transparent;">
+         <children>
+            <Button fx:id="back" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionOnBack" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="backImg" fitHeight="17.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/undo_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="reFresh" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionOnRefresh" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="reFreshImg" fitHeight="18.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/refresh_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Pane fx:id="ordPane" layoutX="84.0" layoutY="160.0" prefHeight="496.0" prefWidth="842.0" style="-fx-background-color: #ffffff67; -fx-background-radius: 70px; -fx-border-radius: 70px; -fx-border-style: dashed;" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="74.0">
+         <children>
+            <Label fx:id="regDelPerL" layoutX="127.0" layoutY="49.0" text="Delivery Person">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="regDelPerF" layoutX="272.0" layoutY="47.0" prefHeight="25.0" prefWidth="284.0">
+               <stylesheets>
+                  <URL value="@application.css" />
+                  <URL value="@media.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="list-cell" />
+                  <String fx:value="Feild" />
+               </styleClass></ComboBox>
+            <Label fx:id="regDelAreaL" layoutX="127.0" layoutY="113.0" text="Delivery Area">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="regDelAreaF" layoutX="272.0" layoutY="111.0" prefHeight="25.0" prefWidth="284.0">
+               <stylesheets>
+                  <URL value="@application.css" />
+                  <URL value="@media.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="list-cell" />
+                  <String fx:value="Feild" />
+               </styleClass></ComboBox>
+            <CheckBox fx:id="isDelReg" layoutX="127.0" layoutY="180.0" mnemonicParsing="false" text="isDeliverd?">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </CheckBox>
+            <DatePicker fx:id="regDateF" layoutX="272.0" layoutY="245.0" prefHeight="25.0" prefWidth="284.0" stylesheets="@media.css">
+               <styleClass>
+                  <String fx:value="calendar-cell" />
+                  <String fx:value="calendar-cell-inactive" />
+                  <String fx:value="calendar-cell-selected" />
+                  <String fx:value="calendar-cell-today" />
+               </styleClass></DatePicker>
+            <Label fx:id="regDateL" layoutX="127.0" layoutY="247.0" text="Delivey Date">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="ordRegL" layoutX="127.0" layoutY="297.0" text="Orders">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </Label>
+            <ListView fx:id="regOrdF" layoutX="272.0" layoutY="297.0" opacity="0.6" prefHeight="168.0" prefWidth="486.0" styleClass="list-cell" stylesheets="@application.css" />
+            <Button fx:id="clearReg" layoutX="108.0" layoutY="477.0" mnemonicParsing="false" onAction="#clear" prefHeight="30.0" prefWidth="101.0" style="-fx-background-radius: 70PX; -fx-border-style: dashed; -fx-border-radius: 70;" text="C L E A R">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="addReg" layoutX="640.0" layoutY="477.0" mnemonicParsing="false" onAction="#addRegularDelivery" prefHeight="25.0" prefWidth="89.0" style="-fx-background-radius: 70PX; -fx-border-radius: 70; -fx-border-style: dashed;" text="A D D">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

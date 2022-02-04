@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #d7bc98;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminCont">
+   <children>
+      <BorderPane layoutY="-1.0" prefHeight="700.0" prefWidth="1007.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="-1.0">
+         <left>
+            <AnchorPane fx:id="side" prefHeight="647.0" prefWidth="211.0" style="-fx-background-color: #d7bc98;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutY="-1.0" prefHeight="642.0" prefWidth="210.0" AnchorPane.bottomAnchor="24.0">
+                     <children>
+                        <SplitMenuButton fx:id="addAll" contentDisplay="RIGHT" mnemonicParsing="false" popupSide="RIGHT" prefHeight="103.0" prefWidth="210.0" stylesheets="@application.css" text="                        ">
+                          <items>
+                            <MenuItem fx:id="coo" mnemonicParsing="false" onAction="#actionOnAddCook" styleClass="c" text="Cook" />
+                            <MenuItem fx:id="dep" mnemonicParsing="false" onAction="#actionOnAddDelPer" styleClass="c" text="Delivery Person" />
+                              <MenuItem fx:id="cus" mnemonicParsing="false" onAction="#actionOnAddCust" styleClass="c" text="Customer" />
+                              <MenuItem fx:id="dis" mnemonicParsing="false" onAction="#actionOnAddDish" styleClass="c" text="Dish" />
+                              <MenuItem fx:id="com" mnemonicParsing="false" onAction="#actionOnAddComp" styleClass="c" text="Component" />
+                              <MenuItem fx:id="or" mnemonicParsing="false" onAction="#actionOnAddOrd" styleClass="c" text="Order" />
+                              <MenuItem fx:id="reg11" mnemonicParsing="false" onAction="#actionOnAddRegDeli" styleClass="c" text="Regular Delivery" />
+                            <MenuItem fx:id="exp11" mnemonicParsing="false" onAction="#actionOnAddExpDeli" styleClass="c" text="Express Delivery" />
+                              <MenuItem fx:id="are" mnemonicParsing="false" onAction="#actionOnAddDelArea" styleClass="c" text="Delivery Area" />
+                              <MenuItem fx:id="bla" mnemonicParsing="false" onAction="#actionOnAddBlack" styleClass="c" text="Black List" />
+                          </items>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/add_graph_report_32px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="removeAll" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="103.0" prefWidth="210.0" stylesheets="@application.css" text="                        ">
+                           <items>
+                              <MenuItem fx:id="coo1" mnemonicParsing="false" onAction="#actionOnRemoveCook" styleClass="c" text="Cook" />
+                              <MenuItem fx:id="dep1" mnemonicParsing="false" onAction="#actionOnRemoveDelPer" styleClass="c" text="Delivery Prson" />
+                              <MenuItem fx:id="cus1" mnemonicParsing="false" onAction="#actionOnRemoveCust" styleClass="c" text="Customer" />
+                              <MenuItem fx:id="dis1" mnemonicParsing="false" onAction="#actionOnRemoveDish" styleClass="c" text="Dish" />
+                              <MenuItem fx:id="com1" mnemonicParsing="false" onAction="#actionOnRemoveComp" styleClass="c" text="Component" />
+                              <MenuItem fx:id="or1" mnemonicParsing="false" onAction="#actionOnRemoveOrd" styleClass="c" text="Order" />
+                              <MenuItem fx:id="dell1" mnemonicParsing="false" onAction="#actionOnRemoveDelivery" styleClass="c" text="Delivery" />
+                              <MenuItem fx:id="are1" mnemonicParsing="false" onAction="#actionOnRemoveDelArea" styleClass="c" text="Delivery Area" />
+                           </items>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/delete_graph_report_32px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="sqlAll" contentDisplay="RIGHT" layoutX="10.0" layoutY="113.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="103.0" prefWidth="210.0" stylesheets="@application.css" text="                        ">
+                           <items>
+                              <MenuItem fx:id="Q11" mnemonicParsing="false" onAction="#Q1Cliked" styleClass="c" text="Deliveries By Person" />
+                              <MenuItem fx:id="Q22" mnemonicParsing="false" onAction="#Q2Cliked" styleClass="c" text="Number Of Deliveries Per Type" />
+                              <MenuItem fx:id="Q33" mnemonicParsing="false" onAction="#Q3Cliked" styleClass="c" text="Revenue From Express Deliveries" />
+                              <MenuItem fx:id="Q44" mnemonicParsing="false" onAction="#Q4Cliked" styleClass="c" text="Popular Component" />
+                              <MenuItem fx:id="Q55" mnemonicParsing="false" onAction="#Q5Cliked" styleClass="c" text="Profit Relation" />
+                              <MenuItem fx:id="Q66" mnemonicParsing="false" onAction="#Q6Cliked" styleClass="c" text="Al Macine" />
+                           </items>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/sql_26px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </SplitMenuButton>
+                        <SplitMenuButton fx:id="editAll" contentDisplay="RIGHT" layoutX="10.0" layoutY="192.0" mnemonicParsing="false" popupSide="RIGHT" prefHeight="103.0" prefWidth="210.0" stylesheets="@application.css" text="                        ">
+                           <items>
+                              <MenuItem fx:id="coe" mnemonicParsing="false" onAction="#actionOnEditCook" styleClass="c" text="Cook" />
+                              <MenuItem fx:id="dee" mnemonicParsing="false" onAction="#actionOnEditDeliveryPerson" styleClass="c" text="Delivery Person" />
+                              <MenuItem fx:id="cue" mnemonicParsing="false" onAction="#actionOnEditCustomer" styleClass="c" text="Customer" />
+                              <MenuItem fx:id="die" mnemonicParsing="false" onAction="#actionOnEditDish" styleClass="c" text="Dish" />
+                              <MenuItem fx:id="ore" mnemonicParsing="false" onAction="#actionOnEditOrder" styleClass="c" text="Order" />
+                              <MenuItem fx:id="exe" mnemonicParsing="false" onAction="#actionOnEditDelivery" styleClass="c" text="Express Delivery" />
+                              <MenuItem fx:id="ae" mnemonicParsing="false" onAction="#actionOnEditDeliveryArea" styleClass="c" text="Delivery Area" />
+                           </items>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/file_settings_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </SplitMenuButton>
+                        <Button fx:id="da" layoutX="10.0" layoutY="222.0" mnemonicParsing="false" onAction="#DataCliked" onMouseClicked="#run1" prefHeight="106.0" prefWidth="210.0" stylesheets="@application.css">
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/database_26px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Separator prefHeight="19.0" prefWidth="210.0" />
+                        <Button fx:id="signOut" layoutX="10.0" layoutY="434.0" mnemonicParsing="false" onAction="#vBoxSignOutClicked" onMouseClicked="#run1" prefHeight="93.0" prefWidth="210.0" stylesheets="@application.css">
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/logout_rounded_left_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+         </left>
+         <top>
+            <AnchorPane prefHeight="43.0" prefWidth="999.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="bar2" layoutX="-1.0" mnemonicParsing="false" onMouseClicked="#run2" prefHeight="43.0" prefWidth="212.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/back_26px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="bar1" layoutX="-1.0" mnemonicParsing="false" onMouseClicked="#run1" prefHeight="43.0" prefWidth="213.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/menu_24px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <MenuBar fx:id="menuBar1" layoutX="211.0" layoutY="4.0" prefHeight="43.0" prefWidth="746.0" style="-fx-background-color: #daad71;" stylesheets="@application.css" AnchorPane.leftAnchor="211.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+                     <menus>
+                        <Menu fx:id="add" mnemonicParsing="false" styleClass="c" text="Add">
+                           <items>
+                              <MenuItem fx:id="cookA" mnemonicParsing="false" onAction="#actionOnAddCook" styleClass="c" text="Cook" />
+                              <MenuItem fx:id="delPerA" mnemonicParsing="false" onAction="#actionOnAddDelPer" styleClass="c" text="Delivery Person" />
+                              <MenuItem fx:id="custA" mnemonicParsing="false" onAction="#actionOnAddCust" styleClass="c" text="Customer" />
+                              <MenuItem fx:id="dishA" mnemonicParsing="false" onAction="#actionOnAddDish" styleClass="c" text="Dish" />
+                              <MenuItem fx:id="compA" mnemonicParsing="false" onAction="#actionOnAddComp" styleClass="c" text="Component" />
+                              <MenuItem fx:id="ordA" mnemonicParsing="false" onAction="#actionOnAddOrd" styleClass="c" text="Order" />
+                              <Menu fx:id="deliA" mnemonicParsing="false" styleClass="c" text="Delivery">
+                                 <items>
+                                    <MenuItem fx:id="regA" mnemonicParsing="false" onAction="#actionOnAddRegDeli" styleClass="c" text="Regular" />
+                                    <MenuItem fx:id="ExpA" mnemonicParsing="false" onAction="#actionOnAddExpDeli" styleClass="c" text="Express" />
+                                 </items>
+                              </Menu>
+                              <MenuItem fx:id="delAreA" mnemonicParsing="false" onAction="#actionOnAddDelArea" styleClass="c" text="DeliveryArea" />
+                              <MenuItem fx:id="blackA" mnemonicParsing="false" onAction="#actionOnAddBlack" styleClass="c" text="BlackList" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="remove" mnemonicParsing="false" styleClass="c" text="Remove">
+                           <items>
+                              <MenuItem fx:id="cookR" mnemonicParsing="false" onAction="#actionOnRemoveCook" styleClass="c" text="Cook" />
+                              <MenuItem fx:id="delPerR" mnemonicParsing="false" onAction="#actionOnRemoveDelPer" styleClass="c" text="DeliveryPerson" />
+                              <MenuItem fx:id="custR" mnemonicParsing="false" onAction="#actionOnRemoveCust" styleClass="c" text="Customer" />
+                              <MenuItem fx:id="dishR" mnemonicParsing="false" onAction="#actionOnRemoveDish" styleClass="c" text="Dish" />
+                              <MenuItem fx:id="compR" mnemonicParsing="false" onAction="#actionOnRemoveComp" styleClass="c" text="Component" />
+                              <MenuItem fx:id="ordR" mnemonicParsing="false" onAction="#actionOnRemoveOrd" styleClass="c" text="Order" />
+                              <MenuItem fx:id="delR" mnemonicParsing="false" onAction="#actionOnRemoveDelivery" styleClass="c" text="Delivery" />
+                              <MenuItem fx:id="delAreaR" mnemonicParsing="false" onAction="#actionOnRemoveDelArea" styleClass="c" text="DeliveryArea" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="data" mnemonicParsing="false" text="Data">
+                           <items>
+                              <MenuItem fx:id="dataAl" mnemonicParsing="false" onAction="#DataCliked" styleClass="c" text="All Data" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="q" mnemonicParsing="false" styleClass="c" text="Quereies">
+                           <items>
+                              <MenuItem fx:id="Q1" mnemonicParsing="false" onAction="#Q1Cliked" styleClass="c" text="Deliveries By Person" />
+                              <MenuItem fx:id="Q2" mnemonicParsing="false" onAction="#Q2Cliked" styleClass="c" text="Number Of Deliveries Per Type" />
+                              <MenuItem fx:id="Q3" mnemonicParsing="false" onAction="#Q3Cliked" styleClass="c" text="Revenue From Express Deliveries" />
+                              <MenuItem fx:id="Q4" mnemonicParsing="false" onAction="#Q4Cliked" styleClass="c" text="Popular Component" />
+                              <MenuItem fx:id="Q5" mnemonicParsing="false" onAction="#Q5Cliked" styleClass="c" text="Profit Relation" />
+                              <MenuItem fx:id="Q6" mnemonicParsing="false" onAction="#Q6Cliked" styleClass="c" text="Al Macine" />
+                           </items>
+                        </Menu>
+                        <Menu fx:id="edit" mnemonicParsing="false" styleClass="c" text="Edit">
+                           <items>
+                              <MenuItem fx:id="cookEd" mnemonicParsing="false" onAction="#actionOnEditCook" styleClass="c" text="Cook" />
+                              <MenuItem fx:id="delPerEd" mnemonicParsing="false" onAction="#actionOnEditDeliveryPerson" styleClass="c" text="Delivery Person" />
+                              <MenuItem fx:id="custEd" mnemonicParsing="false" onAction="#actionOnEditCustomer" styleClass="c" text="Customer" />
+                              <MenuItem fx:id="dishEd" mnemonicParsing="false" onAction="#actionOnEditDish" styleClass="c" text="Dish" />
+                              <MenuItem fx:id="compEd" mnemonicParsing="false" onAction="#actionOnEditComponent" styleClass="c" text="Component" />
+                              <MenuItem fx:id="ordEd" mnemonicParsing="false" onAction="#actionOnEditOrder" styleClass="c" text="Order" />
+                              <MenuItem fx:id="exEd" mnemonicParsing="false" onAction="#actionOnEditDelivery" styleClass="c" text="Delivery" />
+                              <MenuItem fx:id="delAreaEd" mnemonicParsing="false" onAction="#actionOnEditDeliveryArea" styleClass="c" text="Delivery Area" />
+                           </items>
+                        </Menu>
+                     </menus>
+                     <styleClass>
+                        <String fx:value="credits" />
+                        <String fx:value="app_name" />
+                        <String fx:value="list-cell" />
+                        <String fx:value="c" />
+                        <String fx:value="WebView" />
+                     </styleClass>
+                  </MenuBar>
+                  <Button layoutX="957.0" layoutY="2.0" mnemonicParsing="false" onAction="#vBoxSignOutClicked" prefHeight="40.0" prefWidth="41.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/logout_rounded_left_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <right>
+            <Pane fx:id="adminPane" onMouseEntered="#createShadow" onMouseMoved="#createShadow" onMousePressed="#createShadow" onMouseReleased="#createShadow" prefHeight="615.0" prefWidth="795.0" styleClass="c" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="25.0" layoutY="75.0" prefHeight="522.0" prefWidth="726.0" style="-fx-background-color: #ffffff67; -fx-background-radius: 70;" />
+                  <Label fx:id="cookLabel" layoutX="43.0" layoutY="108.0" text="Our Resturant ADD lists:" textFill="#c96532">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="QLabel" layoutX="39.0" layoutY="333.0" text="Our Resturant Quereues and Statics :" textFill="#c96532">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="hBoxQ" layoutX="39.0" layoutY="377.0" prefHeight="147.0" prefWidth="668.0">
+                     <children>
+                        <Button fx:id="q1" mnemonicParsing="false" onAction="#Q1Cliked" prefHeight="147.0" prefWidth="127.0" stylesheets="@application.css" text="Deliveries By Person" textAlignment="CENTER" textFill="#d7bc98" wrapText="true">
+                           <font>
+                              <Font name="Times New Roman Bold" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="q2" mnemonicParsing="false" onAction="#Q2Cliked" prefHeight="147.0" prefWidth="113.0" stylesheets="@application.css" text="Deliveries Per Type" textAlignment="CENTER" textFill="#d7bc98" wrapText="true">
+                           <font>
+                              <Font name="Times New Roman Bold" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="q3" mnemonicParsing="false" onAction="#Q3Cliked" prefHeight="147.0" prefWidth="128.0" stylesheets="@application.css" text="Express Revenue" textAlignment="CENTER" textFill="#d7bc98" wrapText="true">
+                           <font>
+                              <Font name="Times New Roman Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="q4" mnemonicParsing="false" onAction="#Q4Cliked" prefHeight="147.0" prefWidth="124.0" stylesheets="@application.css" text="Popular Component" textAlignment="CENTER" textFill="#d7bc98" wrapText="true">
+                           <font>
+                              <Font name="Times New Roman Bold" size="17.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="q5" mnemonicParsing="false" onAction="#Q5Cliked" prefHeight="147.0" prefWidth="124.0" stylesheets="@application.css" text="Profit Relation" textAlignment="CENTER" textFill="#d7bc98" wrapText="true">
+                           <font>
+                              <Font name="Times New Roman Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="q6" mnemonicParsing="false" onAction="#Q6Cliked" prefHeight="147.0" prefWidth="121.0" stylesheets="@application.css" text="Al Macine" textAlignment="CENTER" textFill="#daad71" wrapText="true">
+                           <font>
+                              <Font name="Times New Roman Bold" size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hboxA" layoutX="43.0" layoutY="159.0" prefHeight="147.0" prefWidth="661.0">
+                     <children>
+                        <Button fx:id="cook1" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionOnAddCook" prefHeight="147.0" prefWidth="87.0" stylesheets="@application.css">
+                           <graphic>
+                              <ImageView fitHeight="87.0" fitWidth="71.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../Images/cook_80px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="add Cook">
+                                 <font>
+                                    <Font name="Times New Roman Italic" size="12.0" />
+                                 </font>
+                              </Tooltip>
+                           </tooltip>
+                           <font>
+                              <Font name="Times New Roman Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="delPer1" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionOnAddDelPer" prefHeight="147.0" prefWidth="120.0" stylesheets="@application.css">
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.8901960849761963" green="0.7921568751335144" blue="0.6039215922355652" opacity="0.9800000190734863" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                           <graphic>
+                              <ImageView fitHeight="71.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/heavy_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="add Delivery Person" />
+                           </tooltip>
+                           <font>
+                              <Font name="Times New Roman Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cust1" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionOnAddCust" prefHeight="147.0" prefWidth="109.0" stylesheets="@application.css">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/add_user_group_woman_man_80px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="add Customer" />
+                           </tooltip>
+                           <font>
+                              <Font name="Times New Roman" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="dish1" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionOnAddDish" prefHeight="147.0" prefWidth="83.0" stylesheets="@application.css">
+                           <graphic>
+                              <ImageView fitHeight="81.0" fitWidth="63.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../Images/meal_80px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="add Dish" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="comp1" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionOnAddComp" prefHeight="147.0" prefWidth="83.0" stylesheets="@application.css">
+                           <graphic>
+                              <ImageView fitHeight="73.0" fitWidth="75.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../Images/paella_80px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="add Component" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="ord1" mnemonicParsing="false" onAction="#actionOnAddOrd" prefHeight="147.0" prefWidth="74.0" stylesheets="@application.css">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/purchase_order_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="add Order" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="deli1" mnemonicParsing="false" onAction="#actionOnAddRegDeli" prefHeight="147.0" prefWidth="90.0" stylesheets="@application.css">
+                           <graphic>
+                              <ImageView fitHeight="58.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/delivery_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="add Express Delivery" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="exp1" contentDisplay="CENTER" layoutX="278.0" layoutY="10.0" mnemonicParsing="false" onAction="#actionOnAddExpDeli" prefHeight="147.0" prefWidth="90.0" stylesheets="@application.css">
+                           <graphic>
+                              <ImageView fitHeight="52.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Images/fast_cart_30px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="add Express Delivery" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="delArea1" mnemonicParsing="false" onAction="#actionOnAddDelArea" prefHeight="147.0" prefWidth="72.0" stylesheets="@application.css">
+                           <graphic>
+                              <ImageView fitHeight="46.0" fitWidth="63.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../Images/location_64px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="add Delivery Area" />
+                           </tooltip>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

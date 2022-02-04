@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.dataCont">
+   <children>
+      <ImageView fx:id="wallPaper" fitHeight="700.0" fitWidth="1000.0" layoutY="-1.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../Images/wallPaper.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="dataL" layoutX="371.0" layoutY="34.0" text="   D    A    T    A" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <Label fx:id="dataHelp" layoutX="65.0" layoutY="116.0" prefHeight="23.0" prefWidth="390.0" text="Please Select The Relavent Data For You:" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <ListView fx:id="dataList" layoutX="65.0" layoutY="207.0" opacity="0.66" prefHeight="431.0" prefWidth="865.0" styleClass="list-cell" stylesheets="@application.css" />
+      <Button fx:id="load" layoutX="854.0" layoutY="116.0" mnemonicParsing="false" onAction="#showData" prefHeight="23.0" prefWidth="76.0" stylesheets="@application.css" text="L O A D">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="dataSelect" layoutX="464.0" layoutY="109.0" prefHeight="25.0" prefWidth="349.0" AnchorPane.leftAnchor="464.0">
+         <tooltip>
+            <Tooltip fx:id="help" text="Press To Select">
+               <font>
+                  <Font name="Times New Roman Italic" size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+         <stylesheets>
+            <URL value="@media.css" />
+            <URL value="@application.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="Feild" />
+            <String fx:value="list-cell" />
+         </styleClass>
+      </ComboBox>
+      <Button fx:id="clear" layoutX="839.0" layoutY="652.0" mnemonicParsing="false" onAction="#clear" prefHeight="23.0" prefWidth="91.0" stylesheets="@application.css" text="C L E A R">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
+      <HBox fx:id="hMainBox" prefHeight="34.0" prefWidth="1000.0" style="-fx-background-color: transparent;">
+         <children>
+            <Button fx:id="back" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionOnBack" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="backImg" fitHeight="17.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/undo_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="reFresh" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionOnRefresh" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="reFreshImg" fitHeight="18.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/refresh_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Label layoutX="260.0" layoutY="157.0" />
+      <Label fx:id="dataHelp1" layoutX="300.0" layoutY="163.0" prefHeight="23.0" prefWidth="121.0" text="Search By Id:" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="id" layoutX="464.0" layoutY="162.0" prefHeight="25.0" prefWidth="349.0" styleClass="Feild" stylesheets="@media.css" />
+      <Button fx:id="search" layoutX="854.0" layoutY="164.0" mnemonicParsing="false" onAction="#Search" prefHeight="23.0" prefWidth="76.0" stylesheets="@application.css" text="SEARCH">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

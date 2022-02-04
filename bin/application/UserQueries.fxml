@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.userQueriesCont">
+   <children>
+      <ImageView fx:id="wallPaper" fitHeight="661.0" fitWidth="1000.0" layoutY="39.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../Images/wall3.jpg" />
+         </image>
+      </ImageView>
+      <TabPane fx:id="tabPane" layoutX="36.0" layoutY="77.0" prefHeight="576.0" prefWidth="935.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="q1Pane" text="Relevant Dish List">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="q1Img" fitHeight="548.0" fitWidth="964.0" layoutX="-28.0" layoutY="-1.0" opacity="0.27" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../Images/wwwwal.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="q1Button" layoutX="344.0" mnemonicParsing="false" onAction="#getRelvDishList" prefHeight="22.0" prefWidth="253.0" text="Get My Relevant Dish List" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="14.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="relv" layoutX="45.0" layoutY="50.0" opacity="0.7" prefHeight="469.0" prefWidth="836.0" style="-fx-background-color: #d3bb9a;" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="50.0">
+                           <stylesheets>
+                              <URL value="@application.css" />
+                              <URL value="@media.css" />
+                           </stylesheets>
+                           <styleClass>
+                              <String fx:value="list-cell" />
+                              <String fx:value="Feild" />
+                           </styleClass></ListView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="q2Pane" text="Cook By Expert">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="q2Img" fitHeight="548.0" fitWidth="963.0" layoutX="-28.0" opacity="0.27" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../Images/wwwwal.jpg" />
+                           </image>
+                        </ImageView>
+                        <ListView fx:id="cookExp" layoutX="55.0" layoutY="66.0" opacity="0.7" prefHeight="453.0" prefWidth="836.0" style="-fx-background-color: #d3bb9a;" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="66.0">
+                           <stylesheets>
+                              <URL value="@application.css" />
+                              <URL value="@media.css" />
+                           </stylesheets>
+                           <styleClass>
+                              <String fx:value="list-cell" />
+                              <String fx:value="Feild" />
+                           </styleClass></ListView>
+                        <Label layoutX="45.0" layoutY="20.0" text="Cook Expertise :" textFill="#c96532">
+                           <font>
+                              <Font name="Times New Roman Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="exp" layoutX="263.0" layoutY="16.0" prefHeight="31.0" prefWidth="211.0">
+                           <stylesheets>
+                              <URL value="@application.css" />
+                              <URL value="@media.css" />
+                           </stylesheets>
+                           <styleClass>
+                              <String fx:value="list-cell" />
+                              <String fx:value="Feild" />
+                           </styleClass></ComboBox>
+                        <Button fx:id="q2Button" layoutX="541.0" layoutY="22.0" mnemonicParsing="false" onAction="#getCookExp" prefHeight="22.0" prefWidth="79.0" stylesheets="@application.css" text="G E T">
+                           <font>
+                              <Font name="Times New Roman Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="q3Pane" text="Popular Component">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="q3Img" fitHeight="548.0" fitWidth="966.0" layoutX="-31.0" opacity="0.27" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../Images/wwwwal.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="q3Button" layoutX="302.0" layoutY="14.0" mnemonicParsing="false" onAction="#getPopComp" prefHeight="22.0" prefWidth="253.0" stylesheets="@application.css" text="Get Popular Component" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="14.0">
+                           <font>
+                              <Font name="Times New Roman Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ListView fx:id="popComp" layoutX="55.0" layoutY="60.0" opacity="0.7" prefHeight="469.0" prefWidth="836.0" style="-fx-background-color: #d3bb9a;" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="54.0" AnchorPane.topAnchor="50.0">
+                           <stylesheets>
+                              <URL value="@application.css" />
+                              <URL value="@media.css" />
+                           </stylesheets>
+                           <styleClass>
+                              <String fx:value="list-cell" />
+                              <String fx:value="Feild" />
+                           </styleClass></ListView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <HBox fx:id="barHBOX" prefHeight="34.0" prefWidth="1000.0" style="-fx-border-color: #ffffff;">
+         <children>
+            <Button fx:id="myHome" mnemonicParsing="false" onAction="#homeClicked" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="myHomeImg" fitHeight="23.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/home_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="myHomeHelp" text="Main Page">
+                     <font>
+                        <Font name="Times New Roman Italic" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Separator fx:id="sep2" orientation="VERTICAL" prefHeight="200.0" />
+            <Button fx:id="myShoppingCart" mnemonicParsing="false" onAction="#ShopClicked" prefHeight="34.0" prefWidth="64.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="myShoppingCartImg" fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/add_shopping_cart_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="myShoppingCartHelp" text="Shopping Cart" />
+               </tooltip>
+               <font>
+                  <Font name="Times New Roman Italic" size="12.0" />
+               </font>
+            </Button>
+            <Separator fx:id="sep3" layoutX="73.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Button fx:id="myProfile" mnemonicParsing="false" onAction="#profileClicked" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="myProfileImg" fitHeight="23.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/profile_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="myProfileHelp" text="My Profile">
+                     <font>
+                        <Font name="Times New Roman Italic" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Separator fx:id="sep4" layoutX="120.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Button fx:id="myOrd" layoutX="126.0" layoutY="10.0" mnemonicParsing="false" onAction="#OrderClicked" prefHeight="34.0" prefWidth="65.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="myOrdImg" fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/order_history_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="myOrdHelp" text="My Orders">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <font>
+                  <Font name="Times New Roman Italic" size="12.0" />
+               </font>
+            </Button>
+            <Separator fx:id="sep4" orientation="VERTICAL" prefHeight="34.0" prefWidth="544.0" visible="false" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignUpCont">
+   <children>
+      <ImageView fx:id="wallPaper" fitHeight="700.0" fitWidth="1006.0" layoutX="-4.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../Images/WhatsApp%20Image%202021-08-27%20at%2002.43.23.jpeg" />
+         </image>
+      </ImageView>
+      <Label fx:id="signupL" layoutX="327.0" layoutY="14.0" prefHeight="50.0" prefWidth="387.0" text="S I G N    U P" textAlignment="CENTER" textFill="#a10000">
+         <font>
+            <Font name="Ravie" size="45.0" />
+         </font>
+         <effect>
+            <Reflection bottomOpacity="0.06" fraction="0.86" topOpacity="0.15" />
+         </effect></Label>
+      <Label fx:id="lastNameL" layoutX="322.0" layoutY="164.0" text="Last Name" AnchorPane.leftAnchor="322.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="firstNameL" layoutX="321.0" layoutY="128.0" text="First Name" AnchorPane.leftAnchor="322.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="birthL" layoutX="324.0" layoutY="200.0" text="Date Of Birth" AnchorPane.leftAnchor="322.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="neighL" layoutX="322.0" layoutY="276.0" text="Neighborhood" AnchorPane.leftAnchor="322.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="passL" layoutX="322.0" layoutY="450.0" prefHeight="17.0" prefWidth="85.0" text="Password" AnchorPane.leftAnchor="322.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="confpassL" layoutX="324.0" layoutY="573.0" text="Confirm Password" AnchorPane.leftAnchor="324.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="userNameL" layoutX="321.0" layoutY="402.0" text="User Name" AnchorPane.leftAnchor="321.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="firstNameF" layoutX="511.0" layoutY="126.0" prefHeight="25.0" prefWidth="174.0" styleClass="Feild" stylesheets="@media.css" AnchorPane.leftAnchor="511.0" AnchorPane.rightAnchor="315.0" />
+      <TextField fx:id="lastNameF" layoutX="511.0" layoutY="161.0" prefHeight="26.0" prefWidth="174.0" styleClass="Feild" stylesheets="@media.css" AnchorPane.leftAnchor="511.0" AnchorPane.rightAnchor="315.0" />
+      <DatePicker fx:id="birthF" layoutX="511.0" layoutY="198.0" stylesheets="@media.css" AnchorPane.leftAnchor="511.0" AnchorPane.rightAnchor="315.0">
+         <styleClass>
+            <String fx:value="calendar-cell" />
+            <String fx:value="calendar-cell-inactive" />
+            <String fx:value="calendar-cell-selected" />
+            <String fx:value="calendar-cell-today" />
+         </styleClass></DatePicker>
+      <PasswordField fx:id="passF" layoutX="511.0" layoutY="448.0" onKeyReleased="#PasswordStrenght" prefHeight="25.0" prefWidth="174.0" styleClass="Feild" stylesheets="@media.css" AnchorPane.leftAnchor="511.0" AnchorPane.rightAnchor="315.0">
+         <tooltip>
+            <Tooltip fx:id="passHelp" text="Password Should Be More Than 8 characters" />
+         </tooltip></PasswordField>
+      <PasswordField fx:id="confpass" layoutX="511.0" layoutY="571.0" prefHeight="25.0" prefWidth="174.0" styleClass="Feild" stylesheets="@media.css" AnchorPane.leftAnchor="511.0" AnchorPane.rightAnchor="315.0" />
+      <TextField fx:id="userNameF" layoutX="511.0" layoutY="399.0" prefHeight="26.0" prefWidth="174.0" styleClass="Feild" stylesheets="@media.css" AnchorPane.leftAnchor="511.0" AnchorPane.rightAnchor="315.0" />
+      <Button fx:id="okB" layoutX="396.0" layoutY="629.0" mnemonicParsing="false" onAction="#addCustomerToSystem" prefHeight="43.0" prefWidth="197.0" style="-fx-border-radius: 30px; -fx-background-radius: 30px;" stylesheets="@application.css" text="OK" textFill="#d09735">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="okImg" fitHeight="29.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/ok_24px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label fx:id="genderL" layoutX="321.0" layoutY="239.0" text="Gender" AnchorPane.leftAnchor="322.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="genderF" layoutX="511.0" layoutY="237.0" prefHeight="25.0" prefWidth="174.0" styleClass="Feild" stylesheets="@media.css" />
+      <Separator layoutX="305.0" layoutY="386.0" prefHeight="5.0" prefWidth="401.0" />
+      <ComboBox fx:id="neighF" layoutX="511.0" layoutY="274.0" prefHeight="25.0" prefWidth="174.0" styleClass="Feild" stylesheets="@media.css" />
+      <CheckBox fx:id="gluten" layoutX="321.0" layoutY="314.0" mnemonicParsing="false" text="Sensitive To Gluten?">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="lactose" layoutX="321.0" layoutY="357.0" mnemonicParsing="false" text="Sensitive To Lactose?">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </CheckBox>
+      <Button fx:id="signOut" layoutY="2.0" mnemonicParsing="false" onAction="#SignOutClicked" prefHeight="34.0" prefWidth="46.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/back_to_24px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ProgressBar fx:id="progressBar" layoutX="322.0" layoutY="519.0" onKeyReleased="#PasswordStrenght" prefHeight="34.0" prefWidth="367.0" progress="0.0" />
+      <Text layoutX="349.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password Should At Least 8 character, contains At Least One Capital Letter." wrappingWidth="343.0" />
+      <ImageView fitHeight="24.0" fitWidth="21.0" layoutX="317.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../OneDrive/שולחן%20העבודה/img/info_26px.png" />
+         </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>

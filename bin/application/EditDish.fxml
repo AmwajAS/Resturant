@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.editDishCont">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1000.0" layoutY="-2.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../Images/wallPaper.jpg" />
+         </image>
+      </ImageView>
+      <HBox fx:id="hMainBox" prefHeight="34.0" prefWidth="1000.0" style="-fx-background-color: transparent;">
+         <children>
+            <Button fx:id="back" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionOnBack" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="backImg" fitHeight="17.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/undo_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="reFresh" contentDisplay="CENTER" mnemonicParsing="false" onAction="#actionOnRefresh" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="reFreshImg" fitHeight="18.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/refresh_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <Pane layoutX="14.0" layoutY="187.0" prefHeight="410.0" prefWidth="629.0" style="-fx-background-color: #ffffff67; -fx-background-radius: 70px; -fx-border-style: dashed; -fx-border-radius: 70px;">
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.34117648005485535" green="0.34117648005485535" blue="0.34117648005485535" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <Label layoutX="127.0" layoutY="47.0" prefHeight="20.0" prefWidth="116.0" text="Dish Name">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="272.0" layoutY="30.0" styleClass="Feild" stylesheets="@media.css" />
+            <Label layoutX="124.0" layoutY="144.0" text="Components">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="124.0" layoutY="360.0" text="Time To Make">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="type" layoutX="270.0" layoutY="82.0" prefWidth="150.0">
+               <stylesheets>
+                  <URL value="@media.css" />
+                  <URL value="@application.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="Feild" />
+                  <String fx:value="list-cell" />
+               </styleClass>
+            </ComboBox>
+            <Label layoutX="124.0" layoutY="91.0" prefHeight="20.0" prefWidth="116.0" text="Dish Type">
+               <font>
+                  <Font name="Times New Roman Bold" size="17.0" />
+               </font>
+            </Label>
+            <ListView fx:id="comps" layoutX="269.0" layoutY="144.0" opacity="0.7" prefHeight="158.0" prefWidth="344.0" styleClass="list-cell" stylesheets="@application.css" />
+            <Text layoutX="441.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MIN">
+               <font>
+                  <Font name="Times New Roman Bold Italic" size="12.0" />
+               </font>
+            </Text>
+            <TextField fx:id="time" layoutX="271.0" layoutY="357.0" prefHeight="27.0" prefWidth="149.0" styleClass="Feild" stylesheets="@media.css" />
+            <Button fx:id="remove" layoutX="504.0" layoutY="312.0" mnemonicParsing="false" onAction="#removeComp" prefHeight="25.0" prefWidth="116.0" style="-fx-border-style: dashed;" stylesheets="@application.css" text="REMOVE">
+               <font>
+                  <Font name="Times New Roman Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="update" layoutX="815.0" layoutY="614.0" mnemonicParsing="false" onAction="#updateItem" prefHeight="25.0" prefWidth="116.0" style="-fx-border-style: dashed;" stylesheets="@application.css" text="UpDate">
+         <font>
+            <Font name="Times New Roman Bold" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="id" layoutX="112.0" layoutY="92.0" prefHeight="36.0" prefWidth="540.0">
+         <stylesheets>
+            <URL value="@application.css" />
+            <URL value="@media.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="list-cell" />
+            <String fx:value="Feild" />
+         </styleClass></ComboBox>
+      <Label layoutX="37.0" layoutY="100.0" prefHeight="21.0" prefWidth="101.0" text="Dish" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="26.0" text="E D I T   A   D I S H" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+         <effect>
+            <Reflection />
+         </effect>
+      </Label>
+      <Button fx:id="load" layoutX="677.0" layoutY="98.0" mnemonicParsing="false" onAction="#loadItem" prefHeight="25.0" prefWidth="116.0" style="-fx-border-style: dashed;" stylesheets="@application.css" text="LOAD">
+         <font>
+            <Font name="Times New Roman Bold" size="12.0" />
+         </font>
+      </Button>
+      <ListView fx:id="all" layoutX="677.0" layoutY="237.0" opacity="0.7" prefHeight="274.0" prefWidth="290.0" styleClass="list-cell" stylesheets="@application.css" />
+      <Label layoutX="738.0" layoutY="201.0" style="-fx-background-color: #ffffff67; -fx-background-radius: 70;" text="All Components List ">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="add" layoutX="757.0" layoutY="525.0" mnemonicParsing="false" onAction="#addNewComp" prefHeight="25.0" prefWidth="116.0" style="-fx-border-style: dashed;" stylesheets="@application.css" text="ADD">
+         <font>
+            <Font name="Times New Roman Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

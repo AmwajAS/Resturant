@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserCont">
+   <children>
+      <HBox fx:id="barHBOX" prefHeight="34.0" prefWidth="1000.0" styleClass="c" stylesheets="@application.css">
+         <children>
+            <Button fx:id="myProfile" mnemonicParsing="false" onAction="#profileClicked" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: transparent;" styleClass="c" stylesheets="@application.css">
+               <graphic>
+                  <ImageView fx:id="myProfileImg" fitHeight="23.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/profile_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="myProfileHelp" text="My Profile">
+                     <font>
+                        <Font name="Times New Roman Italic" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Separator fx:id="sep2" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #000000;" />
+            <Button fx:id="myShoppingCart" mnemonicParsing="false" onAction="#ShopClicked" prefHeight="34.0" prefWidth="64.0" style="-fx-background-color: transparent;" styleClass="c" stylesheets="@application.css">
+               <graphic>
+                  <ImageView fx:id="myShoppingCartImg" fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/add_shopping_cart_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="myShoppingCartHelp" text="Shopping Cart" />
+               </tooltip>
+               <font>
+                  <Font name="Times New Roman Italic" size="12.0" />
+               </font>
+            </Button>
+            <Separator fx:id="sep3" layoutX="73.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-border-color: #000000;" />
+            <Button fx:id="resMenu" layoutX="73.0" layoutY="10.0" mnemonicParsing="false" onAction="#menuClicked" prefHeight="34.0" prefWidth="67.0" style="-fx-background-color: transparent;" styleClass="c" stylesheets="@application.css">
+               <graphic>
+                  <ImageView fx:id="resMenuImg" fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/restaurant_menu_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="resMenuHelp" text="Menu">
+                     <font>
+                        <Font name="Times New Roman Italic" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Separator fx:id="sep4" layoutX="120.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Button fx:id="myOrd" layoutX="126.0" layoutY="10.0" mnemonicParsing="false" onAction="#OrderClicked" prefHeight="34.0" prefWidth="65.0" style="-fx-background-color: transparent;" styleClass="c" stylesheets="@application.css">
+               <graphic>
+                  <ImageView fx:id="myOrdImg" fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/order_history_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="myOrdHelp" text="My Orders">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+               <font>
+                  <Font name="Times New Roman Italic" size="12.0" />
+               </font>
+            </Button>
+            <Separator fx:id="sep4" orientation="VERTICAL" prefHeight="34.0" prefWidth="544.0" visible="false" />
+            <Button fx:id="help" mnemonicParsing="false" onAction="#aboutClicked" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="helpImg" fitHeight="23.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/help_30px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="helpHelp" text="About Us">
+                     <font>
+                        <Font name="Times New Roman Italic" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Separator fx:id="sep5" layoutX="303.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Button fx:id="signOutB" mnemonicParsing="false" onAction="#hBoxSignOutClicked" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="signOutBImg" fitHeight="23.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Images/login_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip fx:id="signOutBHelp" text="Sign Out">
+                     <font>
+                        <Font name="Times New Roman Italic" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+         </children>
+      </HBox>
+      <Pane layoutX="33.0" layoutY="117.0" prefHeight="527.0" prefWidth="901.0" style="-fx-border-radius: 70px;">
+         <children>
+            <VBox fx:id="mainVBOX" layoutX="14.0" layoutY="1.0" prefHeight="527.0" prefWidth="219.0" stylesheets="@application.css">
+               <children>
+                  <Button fx:id="profile" mnemonicParsing="false" onAction="#profileClicked" prefHeight="67.0" prefWidth="222.0" stylesheets="@application.css" text="My Profile" textAlignment="CENTER" textFill="#d08b14">
+                     <font>
+                        <Font name="Times New Roman Bold" size="24.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="list-cell" />
+                        <String fx:value="c" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="create" mnemonicParsing="false" onAction="#create" prefHeight="61.0" prefWidth="222.0" styleClass="list-cell" stylesheets="@application.css" text="Create My Dish" textFill="#d08b14">
+                     <font>
+                        <Font name="Times New Roman Bold" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="orders" mnemonicParsing="false" onAction="#OrderClicked" prefHeight="62.0" prefWidth="223.0" styleClass="list-cell" stylesheets="@application.css" text="My Orders" textFill="#d08b14">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="shoppingCart" mnemonicParsing="false" onAction="#ShopClicked" prefHeight="76.0" prefWidth="223.0" styleClass="list-cell" stylesheets="@application.css" text="Shopping Cart" textFill="#d08b14">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cookByExp" mnemonicParsing="false" onAction="#queriesClicked" prefHeight="70.0" prefWidth="222.0" styleClass="list-cell" stylesheets="@application.css" text="Get Cook By Expert" textFill="#d08b14">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="popComp" mnemonicParsing="false" onAction="#queriesClicked" prefHeight="76.0" prefWidth="224.0" styleClass="list-cell" stylesheets="@application.css" text="Get Popular Component" textFill="#d08b14">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Separator fx:id="sep1" prefHeight="30.0" prefWidth="217.0" />
+                  <Button fx:id="signOut" mnemonicParsing="false" onAction="#hBoxSignOutClicked" prefHeight="93.0" prefWidth="217.0" styleClass="list-cell" stylesheets="@application.css" text="Sign Out" textFill="#d08b14">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="259.0" layoutY="1.0" prefHeight="527.0" prefWidth="644.0">
+               <children>
+                  <ImageView fitHeight="527.0" fitWidth="644.0" layoutX="2.0" layoutY="-2.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../Images/86091d56-b80c-4956-aca4-2f30005277b1.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="m1" layoutX="303.0" layoutY="27.0" mnemonicParsing="false" onAction="#menuClicked" prefHeight="245.0" prefWidth="298.0" style="-fx-background-radius: 120; -fx-background-color: transparent; -fx-border-radius: 120;" stylesheets="@application.css" />
+                  <Button fx:id="s1" layoutX="303.0" layoutY="312.0" mnemonicParsing="false" onAction="#queriesClicked" prefHeight="211.0" prefWidth="341.0" style="-fx-background-radius: 120; -fx-background-color: transparent;" stylesheets="@application.css" text="Today's Special Dishes" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Broadway" size="43.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="m2" layoutX="53.0" layoutY="357.0" mnemonicParsing="false" onAction="#menuClicked" prefHeight="85.0" prefWidth="108.0" style="-fx-background-radius: 120; -fx-background-color: transparent;" stylesheets="@application.css" text="Order Now" textAlignment="CENTER" textFill="#d08b14" wrapText="true">
+                     <font>
+                        <Font name="Broadway" size="22.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label layoutX="48.0" layoutY="87.0" text="Welcome Dear" textFill="#d08b14">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </Label>
+      <Text fx:id="custWel" fill="#d08b14" layoutX="177.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="118.13671875">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

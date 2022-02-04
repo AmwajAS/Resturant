@@ -1,0 +1,1 @@
+java --module-path "C:\Users\amwaj\Downloads\openjfx-16_windows-x64_bin-sdk\javafx-sdk-16\lib" --add-modules javafx.controls,javafx.fxml --add-modules javafx.controls,javafx.media -jar RestJar.jar

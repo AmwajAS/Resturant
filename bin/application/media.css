@@ -1,0 +1,79 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.Feild{
+	-fx-border-color: #c39555;
+	-fx-border-width: 0.0px 0.0px 2px 0.0px;
+	-fx-background-color:transparent;
+}
+
+.date-picker .combo-box {
+-fx-background-insets:0px ;
+-fx-border-width: 0px;
+  }
+
+.date-picker .text-field{
+-fx-background-radius:0px ;
+-fx-border-color: transparent;
+}
+
+.date-picker .arrow-button{
+-fx-background-radius:0px ;
+-fx-background-color: #141414;
+}
+
+.date-picker .arrow-button .arrow{
+-fx-background-radius:0px ;
+-fx-background-color: #c39555;
+}
+
+.date-picker .arrow-button:hover .arrow{
+-fx-background-radius:0px ;
+-fx-background-color: #daa06a;
+ }
+
+ .date-picker .button {
+-fx-background-color: transparent;
+-fx-border-color:transparent;
+-fx-pref-height: 35px;
+-fx-pref-width: 35px;
+ }
+
+ .date-picker .button:hover {
+-fx-border-color:transparent;
+-fx-pref-height: 35px;
+-fx-pref-width: 35px;
+ }
+
+.date-picker .button .arrow:pressed {
+-fx-border-color:transparent;
+-fx-pref-height: 35px;
+-fx-pref-width: 35px;
+ }
+
+ .date-picker .cell {
+-fx-background-color: #141414;
+-fx-pref-width:20px ;
+-fx-pref-height:25px ;
+ }
+
+.date-picker .cell:hover {
+-fx-background-color: #daa06a;
+-fx-pref-width:20px ;
+-fx-pref-height:25px ;
+}
+
+.date-picker .cell:focused {
+-fx-background-color:#c39555;
+-fx-pref-width:20px ;
+-fx-pref-height:25px ;
+
+ }
+
+.date-picker-popup > .left-button.jfx-svg-glyph, .date-picker-popup > .right-button.jfx-svg-glyph{
+-fx-border-color: #daa06a;
+-fx-background-color: black;
+    -fx-fill: rgb(20, 20, 20);
+ }
+ 
+ 
+ 
+ 
